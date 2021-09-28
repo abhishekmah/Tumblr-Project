@@ -1,0 +1,79 @@
+.tumblr_navContainer {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.tumblr_nav {
+  width: 97%;
+  padding: 7px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.tumblr_logo {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.tumblr_logo svg path:hover{
+    animation: fill 4s ease-in-out infinite;
+}
+.tumblr_loginSignup {
+  width: 15%;
+  display: flex;
+  justify-content: flex-end;
+}
+.tumblr_loginSignup button {
+  color: black;
+  font-weight: bolder;
+  text-transform: none;
+}
+.tumblr_loginSignup a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.tumblr_searchBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tumblr_searchBox input {
+  width: 400px;
+  border: none;
+  outline: none;
+}
+@keyframes fill {
+    0%{
+        fill: rgb(255, 255, 255);
+    }
+    10%{
+        fill: rgb(236, 19, 19);
+    }
+    20%{
+        fill: rgb(255, 230, 5);
+    }
+    30%{
+        fill: rgb(0, 243, 20);
+    }
+    4%{
+        fill: rgb(0, 238, 255);
+    }
+    50%{
+        fill: rgb(33, 11, 236);
+    }
+    60%{
+        fill: rgb(252, 7, 231);
+    }
+    70%{
+        fill: rgb(10, 227, 235);
+    }
+    90%{
+        fill: rgb(184, 221, 19);
+    }
+    100%{
+        fill: rgb(255, 255, 255);
+    }
+}
