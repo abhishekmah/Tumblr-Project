@@ -1,0 +1,44 @@
+.main_sign{
+    width: 300px;
+   
+    background: inherit;
+}
+.upper{
+    width: 100%
+}
+.divide{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.divide > span{
+color: white;
+margin-left: 10px;
+margin-right: 10px;
+align-items: center;
+margin-top: -2px;
+  
+}
+.lin{
+    background-color: #fff;
+    height: 1px;
+    position: relative;
+    top: 8px;
+    width: 100%;
+    
+}
+.sig_botm{
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+.sig_botm > span{
+   align-items: center;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    
+}
