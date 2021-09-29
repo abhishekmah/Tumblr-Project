@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { ContextApi } from "../ContextApi/ContextApiProvider";
+import LoginPart from "./comps/Part2/LoginPart"
 
 const TumblrLogin = () => {
     const {setLogin,setSignup} = useContext(ContextApi);
@@ -7,7 +8,7 @@ const TumblrLogin = () => {
     setSignup(true)
     return (
         <div>
-            <h1>Login</h1>
+           <LoginPart/>
         </div>
     )
 }

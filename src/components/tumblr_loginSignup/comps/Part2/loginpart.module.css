@@ -1,0 +1,87 @@
+#slide{
+    width: 100%; 
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    animation: slideBg 9s linear infinite 0s;
+    /* animation-duration: 10s; */
+    animation-timing-function: ease-in-out;
+    background-image: url("https://64.media.tumblr.com/23f67c9e48743b71019a2760ec964eeb/tumblr_pht85lwOZA1wo5099o1_500.png");
+ }
+ @keyframes slideBg{
+     0% {
+         background-image: url("https://64.media.tumblr.com/bb292902f8fd2839428718e87c976113/b631ab06ae2913e6-e3/s2048x3072/38ae050357741e3f0300e35eddfb177c82609aad.png");
+     }
+ 
+      25% {
+         background-image: url("https://64.media.tumblr.com/73c2c919a2ca252149c620480b045ee4/6b6423556eef2746-28/s2048x3072/9d598e55b03d9a2201068eced36f3124d3cf18e7.jpg");
+     }
+ 
+      50% {
+         background-image: url("https://64.media.tumblr.com/5ce6ff046d5a765dc9050ab9ac819627/975e9bab230b7f48-19/s2048x3072/2c5d96129483dc1b61153607ca186cbcfba608c4.png");
+     }
+ 
+      75% {
+         background-image: url("https://64.media.tumblr.com/44a6f98d0b14f7a28280bfbc7548137f/b03247dac2761ace-db/s2048x3072/105b1ef9727eb70c4244b6fe2428629d7710c9e5.png");
+     }
+ 
+      100% {
+         background-image: url("https://64.media.tumblr.com/c0ddb792e763b8611a7215b2c570f19a/458f60ab57ae1d3b-aa/s2048x3072/970b040a01324030061243fc8ce025af31450366.jpg");
+     }
+ }
+ .upper{
+     width: 300px;
+      background: inherit;
+     
+ }
+ .txt{
+ color: white;
+ font-weight: 700;
+ font-size: 20px;
+ text-align: center;
+ }
+ .comp{
+     /* overflow-x: hidden; */
+     width: 100vw;
+     height: 100vh;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+ }
+ .comp_part{
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     justify-content: center;
+ }
+ .foot{
+     align-items: baseline;
+     bottom: 12px;
+     display: flex;
+     justify-content: space-between;
+     position: relative;
+     width: 100%;
+     margin-top: -50px;
+     /* background-color: brown; */
+ }
+ .foot_left > ul{
+     font-size: 16px;
+     color: white;
+     font-weight: 400;
+     line-height: 1.5;
+ }
+ .foot_left > ul > li{
+ display: inline-block;
+     list-style-type: none;
+     margin-left: 8px;
+ }
+ .foot_right{
+     font-size: 16px;
+     color: white;
+     font-weight: 400;
+     line-height: 1.5;
+     margin-right: 30px;
+ }
