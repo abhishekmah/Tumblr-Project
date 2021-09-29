@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import styles from "./HomePage2.module.css"
 import { IoText } from "react-icons/io5";
 import { FaCameraRetro } from "react-icons/fa";
@@ -7,10 +7,10 @@ import { ImQuotesLeft } from "react-icons/im";
 import { ImVideoCamera } from "react-icons/im";
 import { HiLink } from "react-icons/hi";
 import { IoChatboxEllipsesSharp } from "react-icons/io5";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import Fade from 'react-reveal/Fade';
 
 const HomePage2 = () => {
+
     return (
         <div>
             <div className={styles.about}>
@@ -27,7 +27,8 @@ const HomePage2 = () => {
             <div className={styles.blogEx}>
                 <div className={styles.main}>
                 <div className={styles.left}>
-                    <div className={styles.icons} data-aos="fade-up">
+                    <Fade bottom>
+                    <div className={styles.icons}>
                         <div className={styles.diff}>
                             <img src="download.png" alt="" />
                         </div>
@@ -60,7 +61,9 @@ const HomePage2 = () => {
                             <p>Video</p>
                         </div>
                     </div>
-                    <div className={styles.blog} data-aos="fade-up">
+                    </Fade>
+                    <Fade bottom>
+                    <div className={styles.blog} >
                         <div className={styles.diff1}>
                             <img src="download (1).png" alt="" />
                         </div>
@@ -68,9 +71,10 @@ const HomePage2 = () => {
                         <p>action</p>
                         <img src="https://assets.tumblr.com/pop/src/assets/images/about-tumblr/dash_post_01-5eb7ca64.jpg" alt="" width="100%"/>
                     </div>
+                    </Fade>
                 </div>
                 <div className={styles.right}>
-                    <h1>You already know how this works.</h1>
+                    <h1 >You already know how this works.</h1>
                     <p>Once you follow a blog, all of its posts show up in your dashboard, just like you’d expect. See something great? Reblog it to your own blog. Add commentary if you like. Make it your own. Other people will do the same to your posts. That’s how you meet people here.</p>
                 </div>
                 </div>
