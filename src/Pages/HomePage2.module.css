@@ -49,14 +49,15 @@
     background-color: white;
 }
 .diff{
-    margin-left: -98px;
+    margin-left: -92px;
 }
 .diff>img{
     margin-top: -11px;
+    margin-right: 11px;
     border-radius: 5px;
 }
 .diff1{
-    margin-left: -708px;
+    margin-left: -700px;
 }
 .diff1>img{
     border-radius: 5px;
@@ -102,7 +103,7 @@
     background-color: #ff8a00;
 }
 .icons1{
-    width: 40%;
+    width: 42%;
     height: 200px;
     margin-top: 20px;
     flex-wrap: wrap;
