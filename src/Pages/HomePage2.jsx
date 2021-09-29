@@ -39,10 +39,10 @@ const HomePage2 = () => {
                 <div className={styles.main}>
                 <div className={styles.left}>
                     <Fade bottom>
-                    <div className={styles.icons}>
                         <div className={styles.diff}>
                             <img src="download.png" alt="" />
                         </div>
+                    <div className={styles.icons}>
                         <div>
                             <IoText className={styles.hover}/>
                             <p>Text</p>
