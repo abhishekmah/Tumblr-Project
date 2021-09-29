@@ -13,6 +13,7 @@ const TumblrTestPage = () => {
             <Part/>
             <HomePage2/>
             <Lower/>
+
         </div>
     )
 }

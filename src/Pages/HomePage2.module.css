@@ -97,3 +97,78 @@
     font-size: 50px;
     font-weight: 400;
 }
+.orange{
+    width: 100%;
+    background-color: #ff8a00;
+}
+.icons1{
+    width: 40%;
+    height: 200px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    display: flex;
+    margin: auto;
+}
+.icons1>div{
+    width: 19%;
+    height: 110px;
+    margin-top: 30px;
+    margin-right: 25px;
+    float: left;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 40px;
+    padding: 3px;
+}
+.icons1>div>p{
+    margin-top: 30px;
+    font-size: 18px;
+    color: white;
+}
+.icons1>div:nth-child(5){
+    margin-left: 80px;
+}
+.text1{
+    font-size: 17px;
+    color: white;
+    margin-bottom: 5px;
+    width: 35%;
+    text-align: center;
+    margin: auto;
+}
+.text1>h1{
+    margin-top: 145px;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: -10px;
+}
+.hover1{
+    margin-top: 35px;
+}
+.green{
+    width: 100%;
+    padding: 1px;
+    background-color: #00cf35;
+}
+.green>p{
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+.green>img{
+    width: 40%;
+}
+.green>div{
+    width: 38%;
+    font-size: 18px;
+    text-align: left;
+    margin-left: 10px;
+    color: white;
+    margin: auto;
+}
+.green>div>h1{
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
