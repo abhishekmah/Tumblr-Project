@@ -1,0 +1,14 @@
+.password-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px 0px;
+    text-indent: 10px;
+    font-size: 1.0em;
+    min-width: 250px;
+    border-radius: 2px;
+    background-color: white;
+}
+.password-input:focus{
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
