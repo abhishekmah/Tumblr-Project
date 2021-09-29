@@ -1,6 +1,7 @@
 import { useContext } from "react"
+import HomePage2 from "./Pages/HomePage2";
 import { ContextApi } from "../ContextApi/ContextApiProvider"
-
+import Part from "../../Component3/Part1/Part"
 
 const TumblrTestPage = () => {
     const {setLogin,setSignup} = useContext(ContextApi);
@@ -8,7 +9,9 @@ const TumblrTestPage = () => {
     setSignup(true);
     return (
         <div>
-            <h1>Hello Welcome</h1>
+            <Part/>
+            <HomePage2/>
+
         </div>
     )
 }

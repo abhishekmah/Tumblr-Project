@@ -7,6 +7,8 @@ import { ImQuotesLeft } from "react-icons/im";
 import { ImVideoCamera } from "react-icons/im";
 import { HiLink } from "react-icons/hi";
 import { IoChatboxEllipsesSharp } from "react-icons/io5";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const HomePage2 = () => {
     return (
@@ -25,7 +27,7 @@ const HomePage2 = () => {
             <div className={styles.blogEx}>
                 <div className={styles.main}>
                 <div className={styles.left}>
-                    <div className={styles.icons}>
+                    <div className={styles.icons} data-aos="fade-up">
                         <div className={styles.diff}>
                             <img src="download.png" alt="" />
                         </div>
@@ -58,7 +60,7 @@ const HomePage2 = () => {
                             <p>Video</p>
                         </div>
                     </div>
-                    <div className={styles.blog}>
+                    <div className={styles.blog} data-aos="fade-up">
                         <div className={styles.diff1}>
                             <img src="download (1).png" alt="" />
                         </div>

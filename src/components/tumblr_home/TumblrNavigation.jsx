@@ -24,12 +24,12 @@ const TumblrNavigation = () => {
         </div>
         <div className={styles.tumblr_loginSignup}>
           {login && <Link to="/login">
-            <Button  variant="contained" color="success">
+            <Button  variant="contained" style={{backgroundColor: "rgb(0,207,53)"}}>
               Log in
             </Button>
           </Link>}
          { signup && <Link to="/signup">
-            <Button variant="contained" color="primary">
+            <Button variant="contained" style={{backgroundColor: "rgb(0,184,255)"}}>
               Sign up
             </Button>
           </Link>}

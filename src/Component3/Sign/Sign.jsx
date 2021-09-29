@@ -15,9 +15,10 @@ const useStyles = makeStyles((theme) => ({
        textTransform: "none",
         background: "rgb(0,184,255)",
         fontSize: "16px",
-        fontWeight: "500",
+        padding: "10px 0px",
+        fontWeight: "600",
         marginTop: "12px",
-      lineHeight: "1.5",
+        lineHeight: "1.5",
          '&:hover': {
          background: "rgb(0,184,255)",
     },
@@ -27,8 +28,9 @@ const useStyles = makeStyles((theme) => ({
        width: "100%",
        textTransform: "none",
         background: "rgb(0,207,53)",
+        padding: "10px 0px",
         fontSize: "16px",
-         fontWeight: "500",
+         fontWeight: "600",
          marginTop: "12px",
       lineHeight: "1.5",
            '&:hover': {
@@ -41,7 +43,8 @@ const useStyles = makeStyles((theme) => ({
        textTransform: "none",
         background: "white",
         fontSize: "16px",
-         fontWeight: "500",
+        padding: "10px 0px",
+         fontWeight: "600",
          marginTop: "12px",
       lineHeight: "1.5",
            '&:hover': {
@@ -54,10 +57,10 @@ export default function Sign() {
     return (
         <div className={styles.main_sign}>
             <div className={styles.upper}>
-                <Button className={classes.buton}  backgroundColor= "00B8FF"  variant="contained"  color="rgb(0,184,255)"
+                <Button className={classes.buton}  variant="contained"
                 >Sign up</Button>
                 
-                 <Button className={classes.buton1}  backgroundColor= "00B8FF"  variant="contained"  color="rgb(0,184,255)"
+                 <Button className={classes.buton1}  variant="contained"
                 >Log In</Button>
                 
                 <div className={styles.divide}>
