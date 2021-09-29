@@ -13,36 +13,36 @@ const Feed = () => {
         <div className={styles.main1}>
                 <div className={styles.main}>
                 <div className={styles.left}>
-                    <div className={styles.icons}>
                         <div className={styles.diff}>
                             <img src="download.png" alt="" />
                         </div>
+                    <div className={styles.icons}>
                         <div>
-                            <IoText className={styles.hover}/>
+                            <IoText className={styles.hover1}/>
                             <p>Text</p>
                         </div>
                         <div>
-                            <FaCameraRetro className={styles.hover} color= "#f73c1b"/>
+                            <FaCameraRetro className={styles.hover1} color= "#f73c1b"/>
                             <p>Photo</p>
                         </div>
                         <div>
-                            <ImQuotesLeft className={styles.hover} color= '#ff8800'/>
+                            <ImQuotesLeft className={styles.hover1} color= '#ff8800'/>
                             <p>Quote</p>
                         </div>
                         <div>
-                            <HiLink className={styles.hover} color= '#51cc18'/>
+                            <HiLink className={styles.hover1} color= '#51cc18'/>
                             <p>Link</p>
                         </div>
                         <div>
-                            <IoChatboxEllipsesSharp className={styles.hover} color= '#29b9f2'/>
+                            <IoChatboxEllipsesSharp className={styles.hover1} color= '#29b9f2'/>
                             <p>Chat</p>
                         </div>
                         <div>
-                            <FaHeadphonesAlt className={styles.hover} color= '#2152d9'/>
+                            <FaHeadphonesAlt className={styles.hover1} color= '#2152d9'/>
                             <p>Audio</p>
                         </div>
                         <div>
-                            <ImVideoCamera className={styles.hover} color= '#f558c1'/>
+                            <ImVideoCamera className={styles.hover1} color= '#f558c1'/>
                             <p>Video</p>
                         </div>
                     </div>
@@ -53,6 +53,13 @@ const Feed = () => {
                         </div>
                         <br />
                         <p>action</p>
+                        <img src="https://assets.tumblr.com/pop/src/assets/images/about-tumblr/dash_post_01-5eb7ca64.jpg" alt="" width="100%"/>
+                        <img src="https://assets.tumblr.com/pop/src/assets/images/about-tumblr/dash_post_01-5eb7ca64.jpg" alt="" width="100%"/>
+                        <img src="https://assets.tumblr.com/pop/src/assets/images/about-tumblr/dash_post_01-5eb7ca64.jpg" alt="" width="100%"/>
+                        <img src="https://assets.tumblr.com/pop/src/assets/images/about-tumblr/dash_post_01-5eb7ca64.jpg" alt="" width="100%"/>
+                        <img src="https://assets.tumblr.com/pop/src/assets/images/about-tumblr/dash_post_01-5eb7ca64.jpg" alt="" width="100%"/>
+                        <img src="https://assets.tumblr.com/pop/src/assets/images/about-tumblr/dash_post_01-5eb7ca64.jpg" alt="" width="100%"/>
+                        <img src="https://assets.tumblr.com/pop/src/assets/images/about-tumblr/dash_post_01-5eb7ca64.jpg" alt="" width="100%"/>
                         <img src="https://assets.tumblr.com/pop/src/assets/images/about-tumblr/dash_post_01-5eb7ca64.jpg" alt="" width="100%"/>
                     </div>
                 </div>
