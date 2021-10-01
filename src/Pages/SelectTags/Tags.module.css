@@ -23,6 +23,10 @@
     border: 0.5px solid rgb(158, 157, 157);
     border-style: dashed;
 }
+.left>div:hover{
+    cursor: pointer;
+    text-decoration: line-through;
+}
 .right{
     width: 30%;
     padding: 13px;
