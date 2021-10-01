@@ -19,7 +19,7 @@ const TumblrLandingPage = () => {
   return (
     <div className={styles.tumblr_container}>
       <BrowserRouter>
-        {/* <TumblrNavigation /> */}
+        <TumblrNavigation />
         <Switch>
           {
             !auth && <Route exact path="/" component={TumblrTestPage} />

@@ -14,7 +14,7 @@ const TumblrNavigation = () => {
       setToken(x.token);
       setAuth(x.auth);
   }
-
+  
 
   return (
     <div className={styles.tumblr_navContainer}>
