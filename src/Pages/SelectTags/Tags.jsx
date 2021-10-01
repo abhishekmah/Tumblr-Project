@@ -1,49 +1,34 @@
 import React, {useState} from 'react'
 import styles from "./Tags.module.css"
 
+const color = ["#66a8cf","#af8cc6","#f1a24f","#6ac296","#af8cc6","#66a8cf","#af8cc6","#f1a24f","#6ac296","#af8cc6","#66a8cf","#af8cc6","#f1a24f","#6ac296","#af8cc6","#66a8cf","#af8cc6","#f1a24f","#6ac296","#af8cc6"];
+
 const Tags = () => {
     const [selectedTag,setSelectedTag] = useState(["","","","",""]);
-    const [color,setColor] = useState(["","","","",""]);
-    // const [color,setColor] = useState(["#66a8cf","#af8cc6","#f1a24f","#6ac296","#af8cc6"]);
 
     const handleSelect = (e) => {
-        if(selectedTag[4] != "" && color[4] != ""){
-            setSelectedTag([...selectedTag, e[0]]);
-            setColor([...color, e[1]]);
+        if(selectedTag[4] != "" ){
+            setSelectedTag([...selectedTag, e]);
             return;
         }
         var arr = [...selectedTag];
-        var arr1 = [...color];
         
         const res = selectedTag.map((el,i) =>
         {
             if(el === ""){
-                arr[i] = e[0];
+                arr[i] = e;
                 setSelectedTag([...arr]);
-                e[0] = "";
+                e = "";
             }}
             )
-            const res1 = color.map((el,i) =>
-            {
-                if(el === ""){
-                    arr1[i] = e[1];
-                    setSelectedTag([...arr1]);
-                    e[1] = "";
-                }}
-                )
-                console.log(color);
-                // console.log(e[0]);
     }
     
     return (
         <div className={styles.main}>
             <div className={styles.navbar}>
                 <div className={styles.left}>
-                    {selectedTag.map((el) => {
-                        return
-                        {color.map((e) => {
-                            return <div style={{backgroundColor: {e}}}>{el}</div>
-                        })}
+                    {selectedTag.map((el, i) => {
+                        return <div style={{backgroundColor: `${el==="" ? "none" : color[i]}`, border: `${el==="" ? "dashed 0.5px rgb(158, 157, 157)" : "none"}`}}>{el}</div>
                     })
                     }
                 </div>
@@ -61,11 +46,11 @@ const Tags = () => {
                         </div>
                     </div>
                     <div className={styles.right1}>
-                        <div onClick={() => handleSelect(["Actors","#f1a24f"])}>
+                        <div onClick={() => handleSelect("Actors")}>
                             <img src="https://media0.giphy.com/media/ilqOZZnaAoC1zmAKha/giphy.gif?cid=ecf05e47cdmhesjwusrz1gw77mjhmh3ggrutoemesl83pkou&rid=giphy.gif&ct=g" alt="" />
                             <p>Actors</p>
                         </div>
-                        <div onClick={() => handleSelect(["Actors","#af8cc6"])}>
+                        <div onClick={() => handleSelect("Beauty")}>
                             <img src="https://post.healthline.com/wp-content/uploads/2020/08/12239-BEAUTY_The_No_BS_Guide_to_Vitamin_C-thumbnail-732x549-1-732x549.jpg" alt="" />
                             <p>Beauty</p>
                         </div>
@@ -73,8 +58,6 @@ const Tags = () => {
                             <img src="https://suej1u323x-flywheel.netdna-ssl.com/wp-content/uploads/2020/03/Quote-1.jpg" alt="" />
                             <p>Quotes</p>
                         </div>
-                    </div>
-                    <div className={styles.right1}>
                         <div>
                             <img src="https://media4.giphy.com/media/l2JhGk8rR9WFLEDQY/giphy.gif?cid=ecf05e47803gief53q0waac1ih7i00jt7nzmcubzxtbg5sm2&rid=giphy.gif&ct=g" alt="" />
                             <p>Music</p>
@@ -87,8 +70,7 @@ const Tags = () => {
                             <img src="https://media4.giphy.com/media/N6OxVHWh414Zi/giphy.gif?cid=ecf05e47as2cphguqib22ltfyw7wfbgpizeml0b6cvms6oqn&rid=giphy.gif&ct=g" alt="" />
                             <p>Movies</p>
                         </div>
-                    </div>
-                    <div className={styles.five}>
+                     
                         <div>
                             <img src="https://images-na.ssl-images-amazon.com/images/I/81KgXSGE8BL.png" alt="" />
                             <p>Anime</p>
@@ -109,8 +91,7 @@ const Tags = () => {
                             <img src="https://www.popsci.com/uploads/2019/01/07/PMOROYQ3XE2JKZZAT2BQ6RWHNY.jpg" alt="" />
                             <p>Web Series</p>
                         </div>
-                    </div>
-                    <div className={styles.five}>
+                    
                         <div>
                             <img src="https://media0.giphy.com/media/xUNemVaUZFSgHxvQXK/giphy.gif?cid=ecf05e47zgyp3v4ywlw8qkfopdwnfes7gtnbov30vlp9uvdg&rid=giphy.gif&ct=g" alt="" />
                             <p>News</p>
@@ -131,8 +112,7 @@ const Tags = () => {
                             <img src="https://cdn.shopify.com/s/files/1/0735/9163/collections/PET_CARE_ESSENTIALS.png?v=1625538475" alt="" />
                             <p>Pets</p>
                         </div>
-                    </div>
-                    <div className={styles.five}>
+                    
                         <div>
                             <img src="https://m.media-amazon.com/images/I/91AaEkiND8L._AC_SL1500_.jpg" alt="" />
                             <p>Handmade</p>
@@ -153,8 +133,7 @@ const Tags = () => {
                             <img src="https://cdn.writermag.com/2020/09/Writers-Block_web.jpg" alt="" />
                             <p>Writers</p>
                         </div>
-                    </div>
-                    <div className={styles.five}>
+                    
                         <div>
                             <img src="https://dairydevelopment.kerala.gov.in/images/images/his.jpg" alt="" />
                             <p>History</p>
@@ -175,8 +154,7 @@ const Tags = () => {
                             <img src="https://www.marketing91.com/wp-content/uploads/2020/03/Managing-organisational-politics.jpg" alt="" />
                             <p>Politics</p>
                         </div>
-                    </div>
-                    <div className={styles.five}>
+                    
                         <div>
                             <img src="https://media.nature.com/lw800/magazine-assets/d41586-021-00814-5/d41586-021-00814-5_19015374.jpg" alt="" />
                             <p>Sports</p>
@@ -197,8 +175,7 @@ const Tags = () => {
                             <img src="https://images-na.ssl-images-amazon.com/images/I/71kkMXAcLCL.png" alt="" />
                             <p>Cute</p>
                         </div>
-                    </div>
-                    <div className={styles.five}>
+                    
                         <div>
                             <img src="https://whizardapi.com/wp-content/uploads/2021/06/travel.gif" alt="" />
                             <p>Travel</p>
@@ -219,8 +196,7 @@ const Tags = () => {
                             <img src="https://media2.giphy.com/media/ZYK8aHHAn5nYBhSxvV/giphy.gif?cid=ecf05e470zbjjga9sn0znh8g3jvb6g50ownm76p5cjnp0dc6&rid=giphy.gif&ct=g" alt="" />
                             <p>Musicians</p>
                         </div>
-                    </div>
-                    <div className={styles.five}>
+                    
                         <div>
                             <img src="https://i1.wp.com/www.homeandlifestyle.es/wp-content/uploads/2020/03/zocopackagehires-4759_900x.jpg?fit=900%2C900&ssl=1" alt="" />
                             <p>Lifestyles</p>
@@ -241,8 +217,7 @@ const Tags = () => {
                             <img src="https://media3.giphy.com/media/14rEabvlsS4lOg/giphy.gif?cid=ecf05e47smjy4b5m3ebrqpws4fjylo0dnebgflkyss8fiepg&rid=giphy.gif&ct=g" alt="" />
                             <p>Celebrities</p>
                         </div>
-                    </div>
-                    <div className={styles.five}>
+                    
                         <div>
                             <img src="https://content.jdmagicbox.com/comp/def_content/museums/7effij2pmq-museums-6-0yd38.jpg?clr=" alt="" />
                             <p>Meuseums</p>
@@ -263,7 +238,8 @@ const Tags = () => {
                             <img src="https://media4.giphy.com/media/j5E9vHJSjBcDTXe4E4/giphy.gif?cid=ecf05e47jde2xchpbus53cmwlxkamotmo9a1dlhalb1ycnlz&rid=giphy.gif&ct=g" alt="" />
                             <p>Photography</p>
                         </div>
-                    </div>
+                   
+            </div>
             </div>
         </div>
     )
