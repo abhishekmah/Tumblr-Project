@@ -6,7 +6,16 @@ import styles from "./css/TumblrNavigation.module.css";
 import SearchBox from "./searchBox/SearchBox";
 
 const TumblrNavigation = () => {
-  const {login,signup} = useContext(ContextApi);
+  const {login,signup,auth,token,setToken,setAuth} = useContext(ContextApi);
+  
+  let x = JSON.parse(localStorage.getItem("tumblrUser"));
+  
+  if(x){
+      setToken(x.token);
+      setAuth(x.auth);
+  }
+
+
   return (
     <div className={styles.tumblr_navContainer}>
       <div className={styles.tumblr_nav}>
@@ -22,7 +31,8 @@ const TumblrNavigation = () => {
             <SearchBox />
           </div>
         </div>
-        <div className={styles.tumblr_loginSignup}>
+        {
+          !auth && <div className={styles.tumblr_loginSignup}>
           {login && <Link to="/login">
             <Button  variant="contained" style={{backgroundColor: "rgb(0,207,53)",minWidth:"100px"}}>
               Log in
@@ -34,6 +44,7 @@ const TumblrNavigation = () => {
             </Button>
           </Link>}
         </div>
+        }
       </div>
     </div>
   );

@@ -11,6 +11,7 @@ export default function PasswordInput(props) {
     return (
         <input
             type='password'
+            name="password"
             value={props.value}
             className='password-input'
             placeholder={props.placeholder}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./sign.module.css";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
@@ -6,6 +6,8 @@ import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { FaRegCompass } from "react-icons/fa";
 import PasswordInput from "../../../Password_Strength_Indicator/password-input";
+import { ContextApi } from "../../../ContextApi/ContextApiProvider";
+import { useHistory } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
   buton: {
@@ -71,18 +73,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function Sign() {
   const classes = useStyles();
+const {handlePayload,handleRegister} = useContext(ContextApi)
+const history = useHistory();
 
   const [password, setPassword] = useState("");
-  console.log(password);
+
   const handlePasswordChanges = (event) => {
     setPassword(event.target.value);
+    handlePayload(event);
   };
   return (
     <div className={styles.main_sign}>
       <div className={styles.upper}>
         <form>
           <div className={classes.inputBoxes}>
-            <input className={classes.email} type="email" placeholder="Email" />
+            <input className={classes.email} type="email" name="email" placeholder="Email" onChange={handlePayload} />
 
             <PasswordInput
               value={password}
@@ -90,9 +95,11 @@ export default function Sign() {
               handleChanges={handlePasswordChanges}
             />
             <input
+            name="blog_name"
               className={classes.email}
               type="text"
               placeholder="Blog name"
+              onChange={handlePayload}
             />
           </div>
         </form>
@@ -100,7 +107,7 @@ export default function Sign() {
           By clicking "sign up", or continuing with the other options below, you
           agree to Tumblr’s <u>Terms of Service</u> and have read the <u>Privacy Policy</u>
         </p>
-        <Button className={classes.buton} variant="contained">
+        <Button className={classes.buton} variant="contained" onClick={()=>handleRegister(history)}>
           Sign up
         </Button>
 
