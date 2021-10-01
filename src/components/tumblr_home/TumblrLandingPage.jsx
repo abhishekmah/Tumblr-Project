@@ -10,7 +10,7 @@ const TumblrLandingPage = () => {
   return (
     <div className={styles.tumblr_container}>
       <BrowserRouter>
-        <TumblrNavigation />
+        {/* <TumblrNavigation /> */}
         <Switch>
           <Route exact path="/" component={TumblrTestPage} />
           <Route exact path="/signup" component={TumblrSignup}/>
