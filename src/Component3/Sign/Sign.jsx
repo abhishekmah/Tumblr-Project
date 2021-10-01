@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { FaRegCompass } from "react-icons/fa";
+import { useHistory } from 'react-router';
 
 
 
@@ -54,13 +55,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function Sign() {
      const classes = useStyles();
+     const history = useHistory()
     return (
         <div className={styles.main_sign}>
             <div className={styles.upper}>
-                <Button className={classes.buton}  variant="contained"
+                <Button className={classes.buton}  variant="contained" onClick={()=>history.push('/signup')}
                 >Sign up</Button>
                 
-                 <Button className={classes.buton1}  variant="contained"
+                 <Button className={classes.buton1}  variant="contained" onClick={()=>history.push('/login')}
                 >Log In</Button>
                 
                 <div className={styles.divide}>

@@ -13,13 +13,11 @@ const TumblrTestPage = () => {
     setSignup(true);
     return (
         <div>
-            {/* <Part/>
+            <Part/>
             <HomePage2/>
-            <Lower/> */}
+            <Lower/>
 
             {/* <Feed/> */}
-            {/* <Tags/> */}
-            {/* <NavIcons/> */}
         </div>
     )
 }
