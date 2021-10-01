@@ -32,7 +32,7 @@
     border-radius: 5px;
 }
 .diff1{
-    margin-left: -620px;
+    margin-left: -122%;
     position: sticky;
     top: 70px;
 }
@@ -57,7 +57,7 @@
     padding: 3px;
 }
 .hover1:hover{
-    margin-bottom: 3px;
+    transform: translateY(-5px);
 }
 .icons>div>p{
     margin-top: -7px;
