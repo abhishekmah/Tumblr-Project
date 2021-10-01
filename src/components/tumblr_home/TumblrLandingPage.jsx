@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Feed from "../../Pages/Feed/Feed";
+import Tags from "../../Pages/SelectTags/Tags";
 import { ContextApi } from "../ContextApi/ContextApiProvider";
 import TumblrLogin from "../tumblr_loginSignup/TumblrLogin";
 import TumblrSignup from "../tumblr_loginSignup/TumblrSignup";
@@ -28,6 +29,7 @@ const TumblrLandingPage = () => {
             auth && <Route exact path="/" component={Feed} />
           }
           <Route exact path="/signup" component={TumblrSignup}/>
+          <Route exact path="/getting_to_know_tumblr" component={Tags}/>
           <Route exact path="/login" component={TumblrLogin}/>
         </Switch>
       </BrowserRouter>

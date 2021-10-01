@@ -56,6 +56,7 @@ const ContextApiProvider = ({ children }) => {
         handlePayload,
         handleRegister,
         handleLogin,
+        handleGetTags,
         setAuth,
         setToken
       }}
@@ -66,7 +67,7 @@ const ContextApiProvider = ({ children }) => {
 };
 
 export default ContextApiProvider;
-
+//sign up api
 const handleSignUp = (payload,history, setToken,setRegisterErr,setAuth) => {
   axios
     .post(`${process.env.REACT_APP_API_URL}users/register`, payload)
@@ -77,11 +78,13 @@ const handleSignUp = (payload,history, setToken,setRegisterErr,setAuth) => {
       );
       setToken(res.data.token);
       setAuth(true);
-      history.push('/login');
+      history.push('/getting_to_know_tumblr');
     })
     .catch((err) => setRegisterErr(err.response.data.message));
 };
 
+
+//login api
 const handleLoginCheck = (payload,history,setToken,setLoginErr,setAuth)=>{
     axios
     .post(`${process.env.REACT_APP_API_URL}users/login`, payload)
@@ -92,7 +95,13 @@ const handleLoginCheck = (payload,history,setToken,setLoginErr,setAuth)=>{
       );
       setToken(res.data.token);
       setAuth(true);
-      history.push('/signup');
+      history.push('/');
     })
     .catch((err) => setLoginErr(err.response.data.message));
+}
+
+
+//get tags api
+const handleGetTags = () => {
+    axios.get(`${process.env.REACT_APP_API_URL}tags`).then(res=>console.log(res.data))
 }
