@@ -1,52 +1,113 @@
-import React, {useState} from 'react'
-import styles from "./Tags.module.css"
+import React, { useContext, useState } from "react";
+import { useHistory } from "react-router";
+import { ContextApi } from "../../components/ContextApi/ContextApiProvider";
+import styles from "./Tags.module.css";
 
-const color = ["#66a8cf","#af8cc6","#f1a24f","#6ac296","#af8cc6","#66a8cf","#af8cc6","#f1a24f","#6ac296","#af8cc6","#66a8cf","#af8cc6","#f1a24f","#6ac296","#af8cc6","#66a8cf","#af8cc6","#f1a24f","#6ac296","#af8cc6"];
+const color = [
+  "#66a8cf",
+  "#af8cc6",
+  "#f1a24f",
+  "#6ac296",
+  "#af8cc6",
+  "#66a8cf",
+  "#af8cc6",
+  "#f1a24f",
+  "#6ac296",
+  "#af8cc6",
+  "#66a8cf",
+  "#af8cc6",
+  "#f1a24f",
+  "#6ac296",
+  "#af8cc6",
+  "#66a8cf",
+  "#af8cc6",
+  "#f1a24f",
+  "#6ac296",
+  "#af8cc6",
+];
+let tag_ids = [];
 
 const Tags = () => {
-    const [selectedTag,setSelectedTag] = useState(["","","","",""]);
+  const history = useHistory();
+  const { handleGetTags, handleUserInterests } = useContext(ContextApi);
+  const [tags, setTags] = useState(false);
+  if (!tags) handleGetTags(setTags);
 
-    const handleSelect = (e) => {
-        if(selectedTag[4] != "" ){
-            setSelectedTag([...selectedTag, e]);
-            return;
-        }
-        var arr = [...selectedTag];
-        
-        const res = selectedTag.map((el,i) =>
-        {
-            if(el === ""){
-                arr[i] = e;
-                setSelectedTag([...arr]);
-                e = "";
-            }}
-            )
+  // console.log(tags.tags[0].followers,'tags')
+  const [selectedTag, setSelectedTag] = useState(["", "", "", "", ""]);
+
+  const handleSelect = (e) => {
+    if (selectedTag[4] !== "") {
+      setSelectedTag([...selectedTag, e]);
+      return;
     }
-    
-    return (
-        <div className={styles.main}>
-            <div className={styles.navbar}>
-                <div className={styles.left}>
-                    {selectedTag.map((el, i) => {
-                        return <div style={{backgroundColor: `${el==="" ? "none" : color[i]}`, border: `${el==="" ? "dashed 0.5px rgb(158, 157, 157)" : "none"}`}}>{el}</div>
-                    })
-                    }
+    var arr = [...selectedTag];
+
+    selectedTag.map((el, i) => {
+      if (el === "") {
+        arr[i] = e;
+        setSelectedTag([...arr]);
+        e = "";
+      }
+    });
+  };
+
+  return (
+    <div className={styles.main}>
+      <div className={styles.navbar}>
+        <div className={styles.left}>
+          {selectedTag.map((el, i) => {
+            return (
+              <div
+                style={{
+                  backgroundColor: `${el === "" ? "none" : color[i]}`,
+                  border: `${
+                    el === "" ? "dashed 0.5px rgb(158, 157, 157)" : "none"
+                  }`,
+                }}
+              >
+                {el}
+              </div>
+            );
+          })}
+        </div>
+        <div className={styles.right}>
+          <div>Skip</div>
+          <div
+            onClick={() => {
+              handleUserInterests(tag_ids, history);
+            }}
+          >
+            Select
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div className={styles.boxes}>
+        <div className={styles.left1}>
+          <div>
+            <h1>What're you into?</h1>
+            <p>Tell us what you like and we'll get you the good stuff.</p>
+          </div>
+        </div>
+        <div className={styles.right1}>
+          {tags &&
+            tags.map((el) => {
+              return (
+                <div
+                  className={styles.tagBox}
+                  onClick={() => {
+                    tag_ids.push(el._id);
+                    handleSelect(el.tag);
+                  }}
+                >
+                  <img src={el.avatar} alt="" />
+                  <p>{el.tag}</p>
                 </div>
-                <div className={styles.right}>
-                    <div>Skip</div>
-                    <div>Select</div>
-                </div>
-            </div>
-            <hr />
-            <div className={styles.boxes}>
-                    <div className={styles.left1}>
-                        <div>
-                        <h1>What're you into?</h1>
-                        <p>Tell us what you like and we'll get you the good stuff.</p>
-                        </div>
-                    </div>
-                    <div className={styles.right1}>
-                        <div onClick={() => handleSelect("Actors")}>
+              );
+            })}
+
+          {/* <div onClick={() => handleSelect("Actors")}>
                             <img src="https://media0.giphy.com/media/ilqOZZnaAoC1zmAKha/giphy.gif?cid=ecf05e47cdmhesjwusrz1gw77mjhmh3ggrutoemesl83pkou&rid=giphy.gif&ct=g" alt="" />
                             <p>Actors</p>
                         </div>
@@ -237,12 +298,11 @@ const Tags = () => {
                         <div>
                             <img src="https://media4.giphy.com/media/j5E9vHJSjBcDTXe4E4/giphy.gif?cid=ecf05e47jde2xchpbus53cmwlxkamotmo9a1dlhalb1ycnlz&rid=giphy.gif&ct=g" alt="" />
                             <p>Photography</p>
-                        </div>
-                   
-            </div>
-            </div>
+                        </div> */}
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Tags
+export default Tags;

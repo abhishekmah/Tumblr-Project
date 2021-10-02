@@ -32,7 +32,7 @@ const TumblrNavigation = () => {
           </div>
         </div>
         {
-          !auth && <div className={styles.tumblr_loginSignup}>
+          <div className={styles.tumblr_loginSignup}>
           {login && <Link to="/login">
             <Button  variant="contained" style={{backgroundColor: "rgb(0,207,53)",minWidth:"100px"}}>
               Log in

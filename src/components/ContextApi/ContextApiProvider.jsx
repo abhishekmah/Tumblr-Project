@@ -57,6 +57,8 @@ const ContextApiProvider = ({ children }) => {
         handleRegister,
         handleLogin,
         handleGetTags,
+        handleUserInterests,
+        handleUserFeedPosts,
         setAuth,
         setToken
       }}
@@ -102,6 +104,31 @@ const handleLoginCheck = (payload,history,setToken,setLoginErr,setAuth)=>{
 
 
 //get tags api
-const handleGetTags = () => {
-    axios.get(`${process.env.REACT_APP_API_URL}tags`).then(res=>console.log(res.data))
+const handleGetTags = (setTags) => {
+    axios.get(`${process.env.REACT_APP_API_URL}tags`,{
+        headers: {
+          Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('tumblrUser')).token
+        }
+       }).then(res=>setTags(res.data.tags)).catch(err=>console.log(err.response))
+}
+
+//post user interests
+
+const handleUserInterests = (arr,history)=>{
+axios.post(`${process.env.REACT_APP_API_URL}users/userdetail`,{interests:arr},{
+    headers: {
+      Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('tumblrUser')).token
+    }
+   }).then(res=>history.replace('/')).catch(err=>console.log(err.response))
+}
+
+//get posts
+
+const handleUserFeedPosts = (setFeedPosts)=>{
+    axios.get(`${process.env.REACT_APP_API_URL}posts`,{
+        headers: {
+          Authorization: 'Bearer ' + JSON.parse(localStorage.getItem('tumblrUser')).token
+        }
+       }).then(res=>setFeedPosts(res.data)).catch(err=>console.log(err.response))
+
 }

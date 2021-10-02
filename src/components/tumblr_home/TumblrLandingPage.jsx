@@ -6,6 +6,7 @@ import { ContextApi } from "../ContextApi/ContextApiProvider";
 import TumblrLogin from "../tumblr_loginSignup/TumblrLogin";
 import TumblrSignup from "../tumblr_loginSignup/TumblrSignup";
 import styles from "./css/TumblrLandingPage.module.css";
+import SecondNav from "./TumblrFeedNav/SecondNav";
 import TumblrNavigation from "./TumblrNavigation";
 import TumblrTestPage from "./TumblrTestPage";
 
@@ -20,7 +21,8 @@ const TumblrLandingPage = () => {
   return (
     <div className={styles.tumblr_container}>
       <BrowserRouter>
-        <TumblrNavigation />
+        {!auth && <TumblrNavigation />}
+        {auth && <SecondNav/>}
         <Switch>
           {
             !auth && <Route exact path="/" component={TumblrTestPage} />

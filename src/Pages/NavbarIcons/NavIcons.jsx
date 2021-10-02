@@ -7,6 +7,7 @@ import { IoFlashSharp } from "react-icons/io5";
 import { RiWechat2Fill } from "react-icons/ri";
 import { TiUser } from "react-icons/ti";
 import { MdModeEdit } from "react-icons/md";
+import AccountPop from './AccountPop';
 
 export const NavIcons = () => {
     return (
@@ -27,7 +28,7 @@ export const NavIcons = () => {
                 <IoFlashSharp/>
             </div>
             <div>
-                <TiUser/>
+                <AccountPop/>
             </div>
             <div>
                 <MdModeEdit/>

@@ -19,3 +19,15 @@
     color: black;
    background-color: #29b9f2;
 }
+
+.accountPopWindow{
+    width: 250px;
+}
+.accHead{
+    border:2px solid black;
+    background-color: grey;
+}
+.accHead>div{
+    display: flex;
+    justify-content: space-between;
+}

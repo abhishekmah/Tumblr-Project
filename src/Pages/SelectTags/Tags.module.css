@@ -3,8 +3,14 @@
     background-color: #001935;
 }
 .navbar{
+    width: 100%;
+    position: fixed;
+    top: 0%;
     display: flex;
     align-items: center;
+    background-color: #001935;
+    z-index: 20;
+    border-bottom:1px solid rgb(3, 103, 143) ;
 }
 .left{
     width: 70%;
@@ -44,13 +50,17 @@
     cursor: pointer;
     background-color: rgb(0, 184, 255);
 }
-
+.tagBox{
+    border: 1px solid red;
+    position: relative;
+    border-radius: 4px;
+}
 /* //////////////////////////////////////////////////Boxes */
 .boxes{
     width: 1120px;
     height: 2200px;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 80px;
     margin-bottom: 10px;
     background-color: #001935;
     /* border: 1px solid white; */
@@ -94,10 +104,11 @@
     height: 210px;
 }
 .right1>div>p{
-    position: relative;
+    position: absolute;
     font-size: 16px;
     font-weight: 600;
-    bottom: 230px;
+    top: 0%;
+    left: 0%;
     right: 70px;
 }
 .right1>div:hover{
