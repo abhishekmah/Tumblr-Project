@@ -1,37 +1,37 @@
-import React from 'react'
-import styles from "./NavIcons.module.css";
-import { HiHome } from "react-icons/hi";
-import { IoCompassOutline } from "react-icons/io5";
-import { IoIosMail } from "react-icons/io";
-import { IoFlashSharp } from "react-icons/io5";
-import { RiWechat2Fill } from "react-icons/ri";
-import { TiUser } from "react-icons/ti";
-import { MdModeEdit } from "react-icons/md";
+import React from 'react';
+import styles from './NavIcons.module.css';
+import { HiHome } from 'react-icons/hi';
+import { IoCompassOutline } from 'react-icons/io5';
+import { IoIosMail } from 'react-icons/io';
+import { IoFlashSharp } from 'react-icons/io5';
+import { RiWechat2Fill } from 'react-icons/ri';
+import { TiUser } from 'react-icons/ti';
+import { MdModeEdit } from 'react-icons/md';
 
 export const NavIcons = () => {
     return (
         <div className={styles.NavRight}>
             <div>
-                <HiHome/>
+                <HiHome />
             </div>
             <div>
-                <IoCompassOutline/>
-            </div>
-             <div>
-                <IoIosMail/>
+                <IoCompassOutline />
             </div>
             <div>
-                <RiWechat2Fill/>
+                <IoIosMail />
             </div>
             <div>
-                <IoFlashSharp/>
+                <RiWechat2Fill />
             </div>
             <div>
-                <TiUser/>
+                <IoFlashSharp />
             </div>
             <div>
-                <MdModeEdit/>
-            </div> 
+                <TiUser />
+            </div>
+            <div>
+                <MdModeEdit />
+            </div>
         </div>
-    )
-}
+    );
+};
