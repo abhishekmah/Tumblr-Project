@@ -23,7 +23,7 @@ const item = {
     hidden: { y: -30, opacity: 0 },
     visible: {
         y: 0,
-        opacity: 1,
+        opacity: 1
     },
 };
 
@@ -127,7 +127,7 @@ const Tags = () => {
           {tags &&
             tags.map((el) => {
               return (
-                <motion.div
+                <motion.div variants={item}
                   className={styles.tagBox}
                   onClick={() => {
                     tag_ids.push(el._id);
