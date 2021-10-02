@@ -1,18 +1,18 @@
-.main{
+.main {
     width: 100%;
     background-color: #001935;
 }
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
 }
-.left{
+.left {
     width: 70%;
     padding: 10px;
     display: flex;
     justify-content: flex-start;
 }
-.left>div{
+.left > div {
     width: 10%;
     height: 24px;
     padding: 7px;
@@ -23,18 +23,18 @@
     border: 0.5px solid rgb(158, 157, 157);
     border-style: dashed;
 }
-.left>div:hover{
+.left > div:hover {
     cursor: pointer;
     text-decoration: line-through;
 }
-.right{
+.right {
     width: 30%;
     padding: 13px;
     color: white;
     display: flex;
     justify-content: flex-end;
 }
-.right>div{
+.right > div {
     width: 15%;
     padding: 12px;
     margin-right: 15px;
@@ -43,14 +43,14 @@
     color: rgb(0, 184, 255);
     border: 1px solid rgb(0, 184, 255);
 }
-.right>div:hover{
+.right > div:hover {
     color: #001935;
     cursor: pointer;
     background-color: rgb(0, 184, 255);
 }
 
 /* //////////////////////////////////////////////////Boxes */
-.boxes{
+.boxes {
     width: 1120px;
     height: 2200px;
     margin: auto;
@@ -59,7 +59,7 @@
     background-color: #001935;
     /* border: 1px solid white; */
 }
-.left1{
+.left1 {
     width: 430px;
     height: 430px;
     margin-left: 10px;
@@ -69,20 +69,20 @@
     color: white;
     background-color: #7c5cff;
 }
-.left1>div{
+.left1 > div {
     width: 68%;
     margin: auto;
     margin-top: 90px;
     transform: translateY(-5px);
 }
-.left1>div>h1{
+.left1 > div > h1 {
     font-size: 47px;
 }
-.left1>div>p{
+.left1 > div > p {
     color: rgb(229, 226, 226);
     font-size: 22px;
 }
-.right1>div{
+.right1 > div {
     width: 210px;
     height: 210px;
     margin-top: 10px;
@@ -92,19 +92,19 @@
     color: white;
     transition: ease 0.5s all;
 }
-.right1>div>img{
+.right1 > div:hover {
+    transform: scale(0.95);
+    cursor: pointer;
+}
+.right1 > div > img {
     border-radius: 2px;
     width: 100%;
     height: 210px;
 }
-.right1>div>p{
+.right1 > div > p {
     position: relative;
     font-size: 16px;
     font-weight: 600;
     bottom: 230px;
     right: 70px;
-}
-.right1>div:hover{
-    transform: scale(0.95);
-    cursor: pointer;
 }

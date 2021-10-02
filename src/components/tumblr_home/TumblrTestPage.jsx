@@ -6,6 +6,9 @@ import Lower from '../../Component3/Part4/Lower';
 import Feed from '../../Pages/Feed/Feed';
 import Tags from '../../Pages/SelectTags/Tags';
 import { NavIcons } from '../../Pages/NavbarIcons/NavIcons';
+import Post from '../../Pages/CreatePost/Post';
+import TextPost from '../../Pages/CreatePost/TextPost';
+import PhotoPost from '../../Pages/CreatePost/PhotoPost';
 
 const TumblrTestPage = () => {
     const { setLogin, setSignup } = useContext(ContextApi);
@@ -17,9 +20,13 @@ const TumblrTestPage = () => {
             <HomePage2/>
             <Lower/> */}
 
-            <Tags/>
+            {/* <Tags/> */}
             {/* <NavIcons/> */}
             {/* <Feed /> */}
+            {/* <Post/> */}
+            {/* <TextPost /> */}
+
+            {/* <PhotoPost /> */}
         </div>
     );
 };

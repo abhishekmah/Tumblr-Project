@@ -108,7 +108,7 @@ const Tags = () => {
                     </div>
                 </motion.div>
                 <div className={styles.right1}>
-                    {/* <motion.div
+                    <motion.div
                         variants={item}
                         onClick={() => handleSelect('Actors')}
                     >
@@ -443,7 +443,7 @@ const Tags = () => {
                             alt=""
                         />
                         <p>Photography</p>
-                    </motion.div> */}
+                    </motion.div>
                 </div>
             </motion.div>
         </div>
