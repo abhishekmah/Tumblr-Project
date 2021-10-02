@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Feed from "../../Pages/Feed/Feed";
+import Tags from "../../Pages/SelectTags/Tags";
 import { ContextApi } from "../ContextApi/ContextApiProvider";
 import TumblrLogin from "../tumblr_loginSignup/TumblrLogin";
 import TumblrSignup from "../tumblr_loginSignup/TumblrSignup";
 import styles from "./css/TumblrLandingPage.module.css";
+import SecondNav from "./TumblrFeedNav/SecondNav";
 import TumblrNavigation from "./TumblrNavigation";
 import TumblrTestPage from "./TumblrTestPage";
 
@@ -19,7 +21,8 @@ const TumblrLandingPage = () => {
   return (
     <div className={styles.tumblr_container}>
       <BrowserRouter>
-        {/* <TumblrNavigation /> */}
+        {!auth && <TumblrNavigation />}
+        {auth && <SecondNav/>}
         <Switch>
           {
             !auth && <Route exact path="/" component={TumblrTestPage} />
@@ -28,6 +31,7 @@ const TumblrLandingPage = () => {
             auth && <Route exact path="/" component={Feed} />
           }
           <Route exact path="/signup" component={TumblrSignup}/>
+          <Route exact path="/getting_to_know_tumblr" component={Tags}/>
           <Route exact path="/login" component={TumblrLogin}/>
         </Switch>
       </BrowserRouter>

@@ -1,12 +1,12 @@
-import React from 'react';
-import styles from './NavIcons.module.css';
-import { HiHome } from 'react-icons/hi';
-import { IoCompassOutline } from 'react-icons/io5';
-import { IoIosMail } from 'react-icons/io';
-import { IoFlashSharp } from 'react-icons/io5';
-import { RiWechat2Fill } from 'react-icons/ri';
-import { TiUser } from 'react-icons/ti';
-import { MdModeEdit } from 'react-icons/md';
+import React from 'react'
+import styles from "./NavIcons.module.css";
+import { HiHome } from "react-icons/hi";
+import { IoCompassOutline } from "react-icons/io5";
+import { IoIosMail } from "react-icons/io";
+import { IoFlashSharp } from "react-icons/io5";
+import { RiWechat2Fill } from "react-icons/ri";
+import { MdModeEdit } from "react-icons/md";
+import AccountPop from './AccountPop';
 
 export const NavIcons = () => {
     return (
@@ -27,7 +27,7 @@ export const NavIcons = () => {
                 <IoFlashSharp />
             </div>
             <div>
-                <TiUser />
+                <AccountPop/>
             </div>
             <div>
                 <MdModeEdit />

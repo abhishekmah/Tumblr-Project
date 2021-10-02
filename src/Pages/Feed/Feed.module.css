@@ -40,6 +40,7 @@
 .diff1>img{
     border-radius: 5px;
 }
+
 .blog{
     width: 100%;
     border-radius: 5px;
@@ -49,7 +50,7 @@
 .blog>p{
         text-align: left;
         font-weight: 600;
-        margin-top: -80px;
+        margin-top: -70px;
         margin-left: 20px;
 }
 .icons>div{
@@ -168,9 +169,9 @@
     }
     .cont2_infoFlast{
         align-items: center;
-        margin-left: 10px;
-        color: rgb(109, 109, 109);
-        font-size: 1.1rem;
+        margin-left: 5px;
+        color: rgb(65, 65, 65);
+        font-size: 1rem;
         font-weight: 500;
     }
     .iconsBottom{
@@ -194,9 +195,24 @@
     .icon:hover{
         cursor: pointer;
     }
-    .desc{
+    .description{
         width: 95%;
         margin: auto;
     }
-   
-    
+   .tags p {
+       color: grey;
+       font-size: small;
+       width: 95%;
+       margin: auto;
+       text-align: left;
+       cursor: pointer;
+   }
+    .tags p a{
+        font-weight: lighter;
+        text-align: left;
+       text-decoration: underline;
+       padding: 0px 5px;
+    }
+    .tags p a:hover{
+        color:blue
+    }

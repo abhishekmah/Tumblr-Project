@@ -16,17 +16,11 @@ const TumblrTestPage = () => {
     setSignup(true);
     return (
         <div>
-            {/* <Part/>
-            <HomePage2/>
-            <Lower/> */}
+            <Part />
+            <HomePage2 />
+            <Lower />
 
-            {/* <Tags/> */}
-            {/* <NavIcons/> */}
-            {/* <Feed /> */}
-            {/* <Post/> */}
-            {/* <TextPost /> */}
-
-            {/* <PhotoPost /> */}
+            
         </div>
     );
 };
