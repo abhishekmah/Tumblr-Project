@@ -13,8 +13,8 @@ We were able to achieve axact UI of the website, with all these major functional
 ![alt text](https://github.com/vshubhams/project-angel/blob/master/Screenshots/applied.PNG)
 
 ### Team members:-
-#### Abhishek Kumar [View GitHub profile](https://github.com/abhishekmah)
 #### Shubham Kumar [View GitHub profile](https://github.com/Shubham-047)
+#### Abhishek Mahato [View GitHub profile](https://github.com/abhishekmah)
 #### Abhishek Singh  [View GitHub profile](https://github.com/Abhi15git)
 
 ### Technologies used:
