@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import styles from './Feed.module.css';
+import styles from './Likes.module.css';
 import { IoText } from 'react-icons/io5';
 import { FaCameraRetro } from 'react-icons/fa';
 import { FaHeadphonesAlt } from 'react-icons/fa';
@@ -108,58 +108,16 @@ const Feed = () => {
     };
     console.log(posts, 'feed');
 
+    // useEffect(()=>{
+    //   if (!posts) {
+    //     handleUserFeedPosts(setPosts);
+    //   }
+    // },[currUser])
+
     return (
         <div className={styles.main1}>
             <div className={styles.main}>
                 <div className={styles.left}>
-                    <div className={styles.diff}>
-                        <img src="download.png" alt="" />
-                    </div>
-                    <div className={styles.icons}>
-                        <div>
-                            <ChildModal Prop={IoText} Prop1={TextPost} />
-                            <p>Text</p>
-                        </div>
-                        <div>
-                            <FaCameraRetro
-                                className={styles.hover1}
-                                color="#f73c1b"
-                            />
-                            <p>Photo</p>
-                        </div>
-                        <div>
-                            <ImQuotesLeft
-                                className={styles.hover1}
-                                color="#ff8800"
-                            />
-                            <p>Quote</p>
-                        </div>
-                        <div>
-                            <HiLink className={styles.hover1} color="#51cc18" />
-                            <p>Link</p>
-                        </div>
-                        <div>
-                            <IoChatboxEllipsesSharp
-                                className={styles.hover1}
-                                color="#29b9f2"
-                            />
-                            <p>Chat</p>
-                        </div>
-                        <div>
-                            <FaHeadphonesAlt
-                                className={styles.hover1}
-                                color="#2152d9"
-                            />
-                            <p>Audio</p>
-                        </div>
-                        <div>
-                            <ImVideoCamera
-                                className={styles.hover1}
-                                color="#f558c1"
-                            />
-                            <p>Video</p>
-                        </div>
-                    </div>
                     {!posts && (
                         <h1 style={{ color: 'white' }}>
                             Preparing Your Feed ...
@@ -385,6 +343,7 @@ const Feed = () => {
 };
 
 export default Feed;
+
 {
     /* <li>
   <div className={styles.cont2_info}>

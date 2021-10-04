@@ -73,6 +73,13 @@
     text-align: center;
     border-right: 0.5px solid rgb(196, 196, 196);
 }
+.left2 > input {
+    font-size: 15px;
+    margin-left: 40px;
+}
+.show {
+    display: block;
+}
 .left2:hover {
     cursor: pointer;
 }

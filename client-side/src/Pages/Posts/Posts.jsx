@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import styles from './Feed.module.css';
+import styles from './Posts.module.css';
 import { IoText } from 'react-icons/io5';
 import { FaCameraRetro } from 'react-icons/fa';
 import { FaHeadphonesAlt } from 'react-icons/fa';
@@ -17,6 +17,8 @@ import { Modal } from '@mui/material';
 import { Box } from '@mui/system';
 import TextPost from '../CreatePost/TextPost';
 import axios from 'axios';
+import Sidebar from './Sidebar/Sidebar';
+import NoPosts from './NoPosts/NoPosts';
 
 const style = {
     position: 'absolute',
@@ -161,9 +163,10 @@ const Feed = () => {
                         </div>
                     </div>
                     {!posts && (
-                        <h1 style={{ color: 'white' }}>
-                            Preparing Your Feed ...
-                        </h1>
+                        <NoPosts/>
+                        // <h1 style={{ color: 'white' }}>
+                        //     Preparing Your Feed ...
+                        // </h1>
                     )}
                     {posts &&
                         posts.posts.map((el, i) => (
@@ -301,10 +304,11 @@ const Feed = () => {
                 </div>
 
                 <div className={styles.rt_cont2}>
-                    <div className={styles.rt_cont2H}>
+                    <Sidebar />
+                    {/* <div className={styles.rt_cont2H}>
                         Check out these blogs
-                    </div>
-                    <ul>
+                    </div> */}
+                    {/* <ul>
                         {blogs &&
                             blogs.map((user, i) => (
                                 <li>
@@ -377,7 +381,7 @@ const Feed = () => {
                         >
                             Explore all of Tumblr
                         </a>
-                    </ul>
+                    </ul> */}
                 </div>
             </div>
         </div>

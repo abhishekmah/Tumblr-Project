@@ -5,7 +5,9 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { MdAddAPhoto } from 'react-icons/md';
 import { AiFillFileAdd } from 'react-icons/ai';
 
-const PhotoPost = ({handleClose}) => {
+const PhotoPost = ({ handleClose }) => {
+    const [button, setButton] = React.useState(false);
+
     return (
         <div className={styles.main}>
             <div className={styles.diff}>
@@ -24,9 +26,20 @@ const PhotoPost = ({handleClose}) => {
                     </div>
                 </div>
                 <div className={styles.top2}>
-                    <div className={styles.left2}>
+                    <div
+                        className={styles.left2}
+                        onClick={() => {
+                            setButton(true);
+                        }}
+                    >
                         <MdAddAPhoto style={{ marginTop: 30 }} />
                         <p>Upload photos</p>
+                        <input
+                            type="file"
+                            style={{
+                                display: button === false ? 'none' : 'block',
+                            }}
+                        />
                     </div>
                     <hr />
                     <div className={styles.right2}>
@@ -38,7 +51,7 @@ const PhotoPost = ({handleClose}) => {
                 <div className={styles.top1}>
                     <div className={styles.left1}>
                         <button
-                        onClick={handleClose}
+                            onClick={handleClose}
                             style={{
                                 width: '60px',
                                 height: '30px',
