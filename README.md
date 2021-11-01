@@ -43,13 +43,13 @@ In the project directory, you can run:
 ##Clone the Repository.
 
 For Client side:-
-#1. install node modules `npm i`.
 
+#1. install node modules `npm i`.
 #2. start react app `npm start`.
 
 For Server side:-
-#1. install node modules `npm i`.
 
+#1. install node modules `npm i`.
 #2. start the server `npm run server`.
 
 
