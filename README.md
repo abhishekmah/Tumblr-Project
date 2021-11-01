@@ -3,11 +3,12 @@
 ##### Tumblr is an American microblogging and social networking website founded in 2007. The service allows users to post multimedia and other content to a short-form blog.
 We were able to achieve axact UI of the website, with all these major functionalities within 5-6 days.
 
-### - [Visit Site](https://hotelsclone.netlify.app/)
+### - [Visit Site](https://tumblrclone.netlify.app/)
 
 ### Screenshots
 #### Landing page-
-![alt text](https://github.com/abhishekmah/Project-Hotels.com/blob/master/screenshots/landingPage.png)
+![alt text](https://github.com/abhishekmah/Tumblr-Project/blob/master/client-side/Screenshots/LandingPage1.png)
+![alt text](https://github.com/abhishekmah/Tumblr-Project/blob/master/client-side/Screenshots/LandingPage2.png)
 #### SignUp page-
 ![alt text](https://github.com/abhishekmah/Project-Hotels.com/blob/master/screenshots/signup.png)
 #### SignIn page-
