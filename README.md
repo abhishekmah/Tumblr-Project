@@ -10,46 +10,46 @@ We were able to achieve axact UI of the website, with all these major functional
 ![alt text](https://github.com/abhishekmah/Tumblr-Project/blob/master/client-side/Screenshots/LandingPage1.png)
 ![alt text](https://github.com/abhishekmah/Tumblr-Project/blob/master/client-side/Screenshots/LandingPage2.png)
 #### SignUp page-
-![alt text](https://github.com/abhishekmah/Project-Hotels.com/blob/master/screenshots/signup.png)
+![alt text](https://github.com/abhishekmah/Tumblr-Project/blob/master/client-side/Screenshots/SignUpPage2.png)
 #### SignIn page-
-![alt text](https://github.com/abhishekmah/Project-Hotels.com/blob/master/screenshots/signin.png)
-#### Search Results page-
-![alt text](https://github.com/abhishekmah/Project-Hotels.com/blob/master/screenshots/searchResults.png)
-#### Hotel page-
-![alt text](https://github.com/abhishekmah/Project-Hotels.com/blob/master/screenshots/hotelDetailsPage.png)
-#### Payments page-
-![alt text](https://github.com/abhishekmah/Project-Hotels.com/blob/master/screenshots/paymentsPage.png)
-#### Deals page-
-![alt text](https://github.com/abhishekmah/Project-Hotels.com/blob/master/screenshots/dealsPage.png)
+![alt text](https://github.com/abhishekmah/Tumblr-Project/blob/master/client-side/Screenshots/Login.png)
+#### Select Tags page-
+![alt text](https://github.com/abhishekmah/Tumblr-Project/blob/master/client-side/Screenshots/TagsPage.png)
+#### Feed page-
+![alt text](https://github.com/abhishekmah/Tumblr-Project/blob/master/client-side/Screenshots/FeedPage.png)
+#### Explore page-
+![alt text](https://github.com/abhishekmah/Tumblr-Project/blob/master/client-side/Screenshots/ExplorePage.png)
+#### Create Post page-
+![alt text](https://github.com/abhishekmah/Tumblr-Project/blob/master/client-side/Screenshots/CreatePostPage.png)
 
 ### Team members:-
 #### Abhishek Mahato [View GitHub profile](https://github.com/abhishekmah)
-#### Debasish Ransingh [View GitHub profile](https://github.com/Ransingh88)
-#### Rohit Gupta  [View GitHub profile](https://github.com/rohitkumar0427)
-#### Nitish Verma [View GitHub profile](https://github.com/nitishVrma)
+#### Abhishek Singh [View GitHub profile](https://github.com/Abhi15git)
+#### Shubham Kumar  [View GitHub profile](https://github.com/Shubham-047)
 
 ### Pages Designed:
-Landing page, SignUp page, SignIn page, Hotel search page, Hotel details page, Map page, Payment page, Latest deals page.
+Landing page, SignUp page, SignIn page, Select Tags page, Feed page, Explore page, Create Post page.
 
 ### Tech Stack : 
-React Js, JavaScript, HTML, CSS.
+ReactJs, JavaScript , HTML , CSS , MongoDb , Mongoose , Express.
  
  ### Libraries used : 
- JSON-server, Material UI, React Icons, Axios, Styled-components, google-maps-react, react-router, react-router-dom, redux, UUID, react-responsive-carousel.
+ Material UI, React Icons, Axios, Styled-components, framer-motion, react-router-dom, redux, UUID, react-elastic-carousel.
+ 
 ## How to run this project
 
 In the project directory, you can run:
 
-#1. install node modules `npm i`
+##Clone the Repository.
 
-#2. install json-server `npm install -g json-server`
+For Client side:-
+#1. install node modules `npm i`.
 
-#3. start json-server on port 3001
+#2. start react app `npm start`.
 
-#3(a). split the terminal `ctrl+shift+5`
+For Server side:-
+#1. install node modules `npm i`.
 
-#3(b). start json-server `json-server --watch db.json --port 3001`
+#2. start the server `npm run server`.
 
-#4. start react app `npm start`
 
-#5.Most importantly install all the dependencies.
